@@ -4,11 +4,10 @@ import java.time.LocalDate;
 
 public class Persona {
 
-    private int Id;
-    private String Nombre;
-    private String ApelidoPaterno;
-    private String ApellidoMaterno;
+    private String Id;
+    private String NombreCompleto;
     private int Edad;
+    private String Genero;
     private LocalDate FechaNacimiento;
     private String Correo;
 
@@ -16,46 +15,37 @@ public class Persona {
 
     }
 
-    public Persona(int Id, String Nombre, String ApelidoPaterno, String ApellidoMaterno, int Edad, LocalDate FechaNacimiento, String Correo) {
+    public Persona(String Id, String NombreCompleto, int Edad, String Genero, LocalDate FechaNacimiento, String Correo) {
         this.Id = Id;
-        this.Nombre = Nombre;
-        this.ApelidoPaterno = ApelidoPaterno;
-        this.ApellidoMaterno = ApellidoMaterno;
+        this.NombreCompleto = NombreCompleto;
         this.Edad = Edad;
+        this.Genero = Genero;
         this.FechaNacimiento = FechaNacimiento;
         this.Correo = Correo;
     }
 
-    public int getId() {
+    public String getGenero() {
+        return Genero;
+    }
+
+    public void setGenero(String Genero) {
+        this.Genero = Genero;
+    }
+
+    public String getNombreCompleto() {
+        return NombreCompleto;
+    }
+
+    public void setNombreCompleto(String NombreCompleto) {
+        this.NombreCompleto = NombreCompleto;
+    }
+
+    public String getId() {
         return Id;
     }
 
-    public void setId(int Id) {
+    public void setId(String Id) {
         this.Id = Id;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
-
-    public String getApelidoPaterno() {
-        return ApelidoPaterno;
-    }
-
-    public void setApelidoPaterno(String ApelidoPaterno) {
-        this.ApelidoPaterno = ApelidoPaterno;
-    }
-
-    public String getApellidoMaterno() {
-        return ApellidoMaterno;
-    }
-
-    public void setApellidoMaterno(String ApellidoMaterno) {
-        this.ApellidoMaterno = ApellidoMaterno;
     }
 
     public int getEdad() {
@@ -81,7 +71,5 @@ public class Persona {
     public void setCorreo(String Correo) {
         this.Correo = Correo;
     }
-    
-    
 
 }
